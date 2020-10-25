@@ -12,48 +12,6 @@
 #include <asm/io.h>
 #include <linux/usb.h>
 
-/*
-#ifndef __KERNEL__
-#  define __KERNEL__
-#endif
-#ifndef MODULE
-#  define MODULE
-#endif
-
-#include <linux/kernel.h>
-#include <linux/slab.h>
-#include <linux/module.h>
-#include <linux/init.h>
-#include <linux/usb/input.h>
-#include <linux/hid.h>
-
-/* usb stuff *//*
-#include <linux/input.h>
-#include <linux/usb.h>
-
-/* miscdevice stuff *//*
-#include <linux/poll.h>
-#include <linux/miscdevice.h>
-#include <asm/uaccess.h>
-
-/*
- * Version Information
- *//*
-#define DRIVER_VERSION "v0.1"
-#define DRIVER_AUTHOR "Kush Kumar Sharma"
-#define DRIVER_DESC "Mouse driver"
-#define DRIVER_LICENSE "GPL"
-
-MODULE_AUTHOR(DRIVER_AUTHOR);
-MODULE_DESCRIPTION(DRIVER_DESC);
-MODULE_LICENSE(DRIVER_LICENSE);
-
-
-#define MAX_SCREEN 100
-#define MIN_SCREEN 0
-
-int Major = 240;*/
-
 #define DEVICE_NAME "keylogger"
 #define MAX 256
 
@@ -61,10 +19,10 @@ static char buffer[MAX+1] ="";
 static int bufferTop = 0 ;
 
 struct mouse_device {
-    signed char data[4];     /* use a 4-byte protocol */
-    struct urb urb;          /* USB Request block, to get USB data*/
-    struct input_dev *idev;   /* input device, to push out input  data */
-    int x, y;                /* keep track of the position of this device */
+    signed char data[4];
+    struct urb urb;
+    struct input_dev *idev;
+    int x, y; 
 };
 
 static struct mouse_device *mouse;
