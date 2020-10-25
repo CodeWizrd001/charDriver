@@ -1,0 +1,1 @@
+cmd_/home/wizard/Work/osTheory/Module.symvers := sed 's/ko$$/o/' /home/wizard/Work/osTheory/modules.order | scripts/mod/modpost  -a   -o /home/wizard/Work/osTheory/Module.symvers -e -i Module.symvers   -T -
