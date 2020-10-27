@@ -8,17 +8,7 @@ int main()
     char buffer[100] ;
     char rBuff[100] ;
     int fd;
-    fd=open("/dev/keylogger", O_RDWR);
-    /*write(fd,buffer,strlen(buffer));
-    read(fd,rBuff,10);
-    printf("Value : %s \n",rBuff);
-    write(fd,buffer,strlen(buffer));
-    read(fd,rBuff,10);
-    printf("Value : %s \n",rBuff);
-    read(fd,rBuff,10);
-    printf("Value : %s \n",rBuff);
-    read(fd,rBuff,10);
-    printf("Value : %s \n",rBuff);*/
+    fd=open("/dev/mouseController", O_RDWR);
     while(1) 
     {
         scanf("%s",buffer) ;
