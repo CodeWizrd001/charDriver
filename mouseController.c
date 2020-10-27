@@ -44,9 +44,6 @@ ssize_t mouseController_write(struct file *filep ,const char __user *buf,size_t 
     if (copy_from_user(buffer, buf, length) != 0)
         return -EFAULT;
 
-    static char localbuf[16];
-        copy_from_user(buffer, buf, 16) ;
-
     int i, command = -1;
 
     struct input_dev *dev = mouse->idev; 
