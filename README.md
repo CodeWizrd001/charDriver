@@ -1,4 +1,4 @@
-# Cursor Control Character Driver
+# Cursor Control Driver
 
 Driver that moves curson and simulates mouse button clicks
 
