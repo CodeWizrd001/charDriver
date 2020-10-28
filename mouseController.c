@@ -44,9 +44,6 @@ ssize_t mouseController_write(struct file *filep ,const char __user *buf,size_t 
     if (copy_from_user(buffer, buf, length) != 0)
         return -EFAULT;
 
-    static char localbuf[16];
-        copy_from_user(buffer, buf, 16) ;
-
     int i, command = -1;
 
     struct input_dev *dev = mouse->idev; 
@@ -185,4 +182,8 @@ module_exit(mouseController_exit) ;
 
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Vibans_V1");
+<<<<<<< HEAD
 MODULE_DESCRIPTION("mouseController Module");
+=======
+MODULE_DESCRIPTION("mouseController Module");
+>>>>>>> 53fb8cad7642ad1e579eeb431a0fa6725267a1e6
